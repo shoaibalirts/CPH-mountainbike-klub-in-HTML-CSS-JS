@@ -1,0 +1,306 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 75px 300px 800px 1fr;
+  grid-template-rows: 75px 300px 1fr 400px;
+
+  /* rows: navbar, figure, main, footer */
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 5px;
+  background: white;
+}
+
+/* header nav.................................... */
+#navigation {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  background-color: rgb(112, 111, 111);
+  color: white;
+  padding: 10px;
+}
+#navigation nav {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  margin-left: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  justify-items: center;
+  align-items: center;
+}
+#navigation > nav > a {
+  grid-column: 1 / 2;
+  font-size: 1.5rem;
+}
+#navigation > nav > a:hover {
+  opacity: 70%;
+}
+#navigation nav ul {
+  grid-column: 2 / 3;
+  gap: 40px;
+  display: flex;
+}
+/* 1320 x 300 */
+#figure {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  background-color: #074f57;
+  background: url("./billeder/spring1.jpeg");
+  /* background-size: cover; */
+  object-fit: fill;
+  color: white;
+
+  display: grid;
+  grid-template-columns: 400px 1fr 400px;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 10px;
+}
+#figure.slider-left-arrow-btn {
+  grid-column: 1 / 2;
+  justify-self: end;
+}
+.left-arrow {
+  font-size: 3rem;
+  color: white;
+  visibility: hidden;
+}
+.arrow-show {
+  font-size: 3rem;
+  color: white;
+  visibility: visible;
+  background-color: steelblue;
+  border-color: steelblue;
+}
+.arrow-hidden {
+  font-size: 3rem;
+  color: white;
+  visibility: hidden;
+}
+.right-arrow {
+  font-size: 3rem;
+  color: white;
+  visibility: visible;
+  background-color: steelblue;
+  border-color: steelblue;
+}
+
+#figure.slider-content {
+  grid-column: 2 / 3;
+}
+#figure.slider-right-arrow-btn {
+  grid-column: 3 / 4;
+  justify-self: start;
+  align-self: start;
+}
+figure figcaption {
+  text-align: center;
+  padding: 5px;
+}
+#talentudvikling {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 900px 1fr;
+  grid-template-rows: 200px 1fr;
+}
+.intro * {
+  margin-top: 20px;
+  text-align: center;
+}
+.intro h5 {
+  margin-left: 100px;
+}
+.politik {
+  margin-top: 20px;
+  display: flex;
+  text-align: left;
+}
+.politik p {
+  margin-left: 40px;
+}
+.article1 {
+  margin-left: 300px;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+.article2 {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  height: 300px;
+  background-color: steelblue;
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  padding-left: 320px;
+  padding-right: 25px;
+  text-align: left;
+}
+.article2 * {
+  padding: 10px;
+}
+.article3 {
+  height: 300px;
+  grid-column: 2 / 3;
+  grid-row: 2;
+  margin-top: 50px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.training {
+  grid-column: 1;
+  grid-row: 1 / 2;
+}
+.konkurrencer {
+  grid-column: 1;
+  grid-row: 2 / 3;
+}
+.medlemskab {
+  grid-column: 1;
+  grid-row: 3 / 4;
+}
+.training,
+.konkurrencer,
+.medlemskab {
+  display: flex;
+  text-align: left;
+  column-gap: 30px;
+  align-content: center;
+}
+
+.btn-in-fig {
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+}
+svg {
+  width: 100px;
+  height: 50px;
+}
+
+#customer-info {
+  grid-column: span 3;
+  grid-row-start: 4;
+  background-color: rgb(112, 111, 111);
+  /* background-image: url(./billeder/spring3.jpg);
+  object-fit: fill; */
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.nyhedsbrev {
+  display: grid;
+  grid-template-columns: 220px 150px 800px 200px;
+
+  margin-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 60px;
+  column-gap: 10px;
+}
+.nyhedsbrev p {
+  grid-column: 1 / 2;
+}
+.nyhedsbrev figure {
+  grid-column: 2 / 3;
+}
+.nyhedsbrev form {
+  grid-column: 3 / 5;
+  margin-left: 150px;
+}
+
+.hr {
+  grid-area: hr;
+}
+.grouping {
+  display: grid;
+  grid-template-areas: "kontaktformular kontaktformular footer-navigation-links postal-address";
+}
+
+.kontaktformular {
+  grid-area: kontaktformular;
+}
+.personalinformation {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  justify-content: center;
+  margin-left: 60px;
+}
+.personalinformation > p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.personalinformation > input,
+textarea {
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.personalinformation > button {
+  margin-top: 5px;
+  background: steelblue;
+  padding: 10px;
+  border: 1px solid steelblue;
+  color: white;
+}
+.footer-navigation-links {
+  grid-area: footer-navigation-links;
+  align-self: center;
+  margin-top: 200px;
+}
+.postal-address {
+  grid-area: postal-address;
+  align-self: center;
+  margin-top: 150px;
+}
+
+.rute-figures svg {
+  width: 30px;
+  margin-left: 10px;
+}
+.first-svg {
+  margin-left: 20px;
+}
+.tel {
+  margin-top: 10px;
+}
+.label {
+  padding: 3px;
+}
+.tilmeld-form label {
+  padding: 3px;
+}
+.tilmeld-form input {
+  padding: 10px;
+}
+.tilmeld-form button {
+  background: steelblue;
+  padding: 10px;
+  border: 1px solid steelblue;
+  color: white;
+}
